@@ -61,6 +61,18 @@ public class CatTest {
 
         Assert.assertNotEquals(expectedName, actual);
     }
+
+    @Test
+    public void testSpeak() {
+        String expected = "meow!";
+
+        Cat cat = new Cat ("", new Date(), 0);
+        String actual = cat.speak();
+
+        Assert.assertEquals(expected, actual);
+    }
+
+
     @Test
     public void testSetBirth() {
         Date givenDate = new Date();
@@ -71,6 +83,18 @@ public class CatTest {
         Date actual = cat.getBirthDate();
 
         Assert.assertEquals(givenDate, actual);
+    }
+
+    @Test
+    public void testEat() {
+        Cat cat = new Cat("", new Date(), 0);
+        Food catFood = new Food();
+
+        cat.eat(catFood);
+        Integer food = 1;
+        Integer actual = cat.getNumberOfMealsEaten();
+
+        Assert.assertEquals(food, actual);
     }
 
 
