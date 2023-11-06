@@ -94,5 +94,4 @@ public class DogTest {
         Assert.assertEquals(expected, actual);
     }
 
-
 }
